@@ -1,18 +1,26 @@
 return {
-  'nvim-treesitter/nvim-treesitter-context',
-  dependencies = { 'nvim-treesitter/nvim-treesitter' },
-  opts = {
-    enable = true, -- Enable the context window
-    max_lines = 1, -- Show only the first line of the context
-    trim_scope = 'inner', -- Show the closest inner scope
-    patterns = { -- Specify patterns for context
-      default = {
-        'class',
-        'function',
-        'method',
+  {
+    'lukas-reineke/indent-blankline.nvim',
+    main = 'ibl',
+    opts = {
+      scope = {
+        enabled = true,
+        highlight = 'Function',
+      },
+      indent = {
+        smart_indent_cap = true,
+        repeat_linebreak = false,
       },
     },
-    mode = 'topline', -- Line used to calculate context
-    separator = nil, -- No separator line between context and code
+  },
+  {
+    'nvim-treesitter/nvim-treesitter-context',
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    opts = {
+      enable = true,
+      max_lines = 1,
+      mode = 'cursor',
+      separator = nil,
+    },
   },
 }

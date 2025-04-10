@@ -17,8 +17,8 @@ return {
         'eslint_d', -- TS/JS linter
         'shfmt', -- Shell formatter
         'checkmake', -- Makefile linter
-        'ruff', -- Python linter/formatter
         'gofmt', -- Go formatter
+        'black', -- Python
       },
       automatic_installation = true,
     }
@@ -27,14 +27,14 @@ return {
     local sources = {
       diagnostics.checkmake,
       formatting.prettier.with {
-        filetypes = { 'html', 'json', 'yaml', 'markdown' },
+        filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'vue', 'css', 'scss', 'json', 'yaml', 'markdown' },
+        extra_args = { '--tab-width', '2' },
       },
       formatting.stylua,
       formatting.shfmt.with { args = { '-i', '4' } },
       formatting.terraform_fmt,
       formatting.gofmt,
-      -- Uncomment this if Ruff formatting is required
-      -- formatting.ruff.with { extra_args = { '--extend-select', 'I' } },
+      formatting.black,
     }
 
     -- Auto-format on save

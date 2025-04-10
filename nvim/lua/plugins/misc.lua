@@ -1,6 +1,5 @@
 -- Standalone plugins with less than 10 lines of config go here
 return {
-  { 'echasnovski/mini.nvim', version = false },
   {
     -- Tmux & split window navigation
     'christoomey/vim-tmux-navigator',

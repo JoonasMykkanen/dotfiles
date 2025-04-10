@@ -27,8 +27,10 @@ keymap.set('n', '<C-a>', 'gg<S-v>G')
 
 -- Save file and quit
 keymap.set('n', '<Leader>w', ':update<Return>', opts)
-keymap.set('n', '<Leader>q', ':quit<Return>', opts)
-keymap.set('n', '<Leader>Q', ':qa<Return>', opts)
+-- Save all buffers and quit Neovim
+keymap.set('n', '<Leader>q', ':wa | qa<CR>', opts) -- Save all and quit
+-- Quit Neovim without saving any buffers
+keymap.set('n', '<Leader>Q', ':qa!<CR>', opts) -- Force quit without saving
 
 -- File explorer with NvimTree
 keymap.set('n', '<Leader>f', ':NvimTreeFindFile<Return>', opts)

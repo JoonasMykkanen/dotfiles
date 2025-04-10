@@ -7,7 +7,7 @@ return {
 
     local config = {
       -- Main options --
-      style = 'darker', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
+      style = 'dark', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
       transparent = true, -- Show/hide background
       term_colors = true, -- Change terminal color as per the selected theme style
       ending_tildes = false, -- Show the end-of-buffer tildes. By default they are hidden
@@ -62,7 +62,11 @@ return {
         -- diff_change = '#1c3448',
         -- diff_text = '#2c5372',
       }, -- Override default colors
-      highlights = {}, -- Override highlight groups
+
+      highlights = {
+        Function = { fg = '#61afef', style = 'none' },
+        Label = { fg = '#98c379', style = 'none' },
+      },
 
       -- Plugins Config --
       diagnostics = {
