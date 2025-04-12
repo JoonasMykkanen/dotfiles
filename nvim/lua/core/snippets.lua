@@ -1,4 +1,3 @@
-
 -- Custom code snippets for different purposes
 
 -- Prevent LSP from overwriting treesitter color settings

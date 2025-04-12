@@ -32,13 +32,6 @@ return {
       ['zb'] = function()
         neoscroll.zb { half_win_duration = 150 }
       end,
-
-      ['j'] = function()
-        neoscroll.scroll(1, { duration = 50 })
-      end,
-      ['k'] = function()
-        neoscroll.scroll(-1, { duration = 50 })
-      end,
     }
     local modes = { 'n', 'v', 'x' }
     for key, func in pairs(keymap) do
