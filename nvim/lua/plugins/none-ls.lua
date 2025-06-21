@@ -12,13 +12,13 @@ return {
     -- Setup Mason-Null-LS
     require('mason-null-ls').setup {
       ensure_installed = {
-        'prettier', -- TS/JS formatter
-        'stylua', -- Lua formatter
-        'eslint_d', -- TS/JS linter
-        'shfmt', -- Shell formatter
+        'prettier',  -- TS/JS formatter
+        'stylua',    -- Lua formatter
+        'eslint_d',  -- TS/JS linter
+        'shfmt',     -- Shell formatter
         'checkmake', -- Makefile linter
-        'gofmt', -- Go formatter
-        'black', -- Python
+        'gofmt',     -- Go formatter
+        'black',     -- Python
       },
       automatic_installation = true,
     }
@@ -34,7 +34,9 @@ return {
       formatting.shfmt.with { args = { '-i', '4' } },
       formatting.terraform_fmt,
       formatting.gofmt,
-      formatting.black,
+      formatting.black.with {
+        extra_args = { '--line-length', '120' },
+      },
     }
 
     -- Auto-format on save

@@ -88,7 +88,7 @@ vim.keymap.set('n', '<leader>b', '<cmd> enew <CR>', opts) -- new buffer
 
 -- Tabs
 -- vim.keymap.set('n', '<leader>to', ':tabnew<CR>', opts) -- open new tab
--- vim.keymap.set('n', '<leader>tx', ':tabclose<CR>', opts) -- close current tab
+vim.keymap.set('n', '<leader>tx', ':tabclose<CR>', opts) -- close current tab
 -- vim.keymap.set('n', '<leader>tn', ':tabn<CR>', opts) --  go to next tab
 -- vim.keymap.set('n', '<leader>tp', ':tabp<CR>', opts) --  go to previous tab
 

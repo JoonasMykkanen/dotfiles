@@ -43,7 +43,7 @@ return {
         -- bg_d = '#21252b',
         -- bg_blue = '#73b8f1',
         -- bg_yellow = '#ebd09c',
-        -- fg = '#abb2bf',
+        fg = '#ffffff',
         -- purple = '#c678dd',
         -- green = '#98c379',
         -- orange = '#d19a66',

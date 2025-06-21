@@ -1,5 +1,5 @@
-require 'core.options'  -- Load general options
-require 'core.keymaps'  -- Load general keymaps
+require 'core.options' -- Load general options
+require 'core.keymaps' -- Load general keymaps
 require 'core.snippets' -- Custom code snippets
 
 -- Set up the Lazy plugin manager
@@ -16,6 +16,7 @@ vim.opt.rtp:prepend(lazypath)
 -- Set up plugins
 require('lazy').setup {
   require 'plugins.neotree',
+  require 'plugins.comment',
   require 'plugins.colorscheme',
   require 'plugins.ui',
   require 'plugins.bufferline',
@@ -31,6 +32,7 @@ require('lazy').setup {
   require 'plugins.misc',
   require 'plugins.ts-autotag',
   require 'plugins.scroll',
+  require 'plugins.harpoon',
 }
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

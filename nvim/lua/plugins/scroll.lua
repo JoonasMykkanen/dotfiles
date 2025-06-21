@@ -10,10 +10,10 @@ return {
         neoscroll.ctrl_f { duration = 350 }
       end,
       ['PageUp'] = function()
-        neoscroll.ctrl_b { duration = 350 }
+        neoscroll.ctrl_b { duration = 50 }
       end,
       ['PageDown'] = function()
-        neoscroll.ctrl_f { duration = 350 }
+        neoscroll.ctrl_f { duration = 50 }
       end,
 
       ['C-y'] = function()
@@ -39,6 +39,7 @@ return {
     end
     neoscroll.setup {
       performance_mode = true,
+      duration = 50,
 
       mappings = {
         '<C-u>',

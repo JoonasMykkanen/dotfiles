@@ -82,3 +82,5 @@ alias ls="eza --all --icons=always"
 
 # Lazygit
 alias lg="lazygit"
+
+alias ..="cd .."

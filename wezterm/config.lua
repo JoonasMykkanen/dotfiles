@@ -6,6 +6,9 @@ if wezterm.config_builder then
 end
 
 config = {
+	max_fps = 240,
+	animation_fps = 240,
+
 	send_composed_key_when_left_alt_is_pressed = true,
 	send_composed_key_when_right_alt_is_pressed = true,
 	default_cursor_style = "SteadyBar",
@@ -17,7 +20,7 @@ config = {
 	use_fancy_tab_bar = false,
 	tab_bar_at_bottom = false,
 	font_size = 15,
-	font = wezterm.font("JetBrains Mono", { weight = "Bold" }),
+	font = wezterm.font("JetBrains Mono"),
 	enable_tab_bar = false,
 	window_padding = {
 		left = 3,
@@ -33,7 +36,7 @@ config = {
 			hsb = {
 				hue = 1.0,
 				saturation = 1.02,
-				brightness = 0.25,
+				brightness = 0.5,
 			},
 			-- attachment = { Parallax = 0.3 },
 			-- width = "100%",
@@ -45,7 +48,7 @@ config = {
 			},
 			width = "100%",
 			height = "100%",
-			opacity = 0.55,
+			opacity = 0.3,
 		},
 	},
 	-- from: https://akos.ma/blog/adopting-wezterm/
