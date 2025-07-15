@@ -1,6 +1,10 @@
 -- Standalone plugins with less than 10 lines of config go here
 return {
   {
+    -- Helping with better buffer closing
+    'moll/vim-bbye',
+  },
+  {
     -- Tmux & split window navigation
     'christoomey/vim-tmux-navigator',
   },
